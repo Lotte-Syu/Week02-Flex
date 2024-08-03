@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*Css Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*box-model*/
+*, *::before, *::after{
+    box-sizing: border-box;
+    /*outline: solid 1px;*/ 
+}
+
+/*Base*/
+body{
+    font-family: "Bruno Ace SC",sans-serif;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Layout 布局和排版：導覽、內容區塊、表尾等*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header{
+    background: #000;
+    color:#D1D1D1;
+    padding: 40px 0; /* 上下推40，左右推0，下在header裡面只有一個容器上下各推40*/    
+}
+
+/* Component */
+.but-white{
+    padding: 12px 24px;
+    border-radius: 32px;
+    background:#ffff;
+    color: #000;
+}
+/* Page 只有這個頁面會出現的元素做樣式設定*/
+.banner{
+    background: #000;
+    color: #ffff;
+}
+.banner-william{
+    text-align: right;
+    display: block;/* span是行內元素，元素寬度等於內容的寬度；變成區塊元素，寬度變成外容器滿版寬，text-align:right才有效果 */
+}
+.intro{
+    background-image: url("img/background-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0;
+}
+.intro-des{
+    color: white;
+    width: 526px;
+}
+.about-list{
+    width: 636px;
+    color: #15161D;
+    flex-wrap: wrap;
+    gap: 24px;
+
+}
+.about-des{
+    width: 526px;
+    color: #15161D;
+}
+.about{
+    padding: 160px 0;
+}
+.about-list li{
+     width: calc(50% - 12px); /* 記得+-左有兩邊都要有空格 */ /* 排版有做內容器斷行flex-wrap: wrap的話，記得內容器要設寬度才會有斷行效果 */
+     border: 1px solid #E3E3E3;
+     box-shadow: 4px 4px 4px 0px #00000014;
+
+}
+.contact{
+    background: linear-gradient(#050014, #01021EE3);
+    padding: 96px 0;
+}
+.contact-me{
+    width: 657px;
+    color: #fff;
+}
+.icon-link{
+    width: 526px;   
+}
+
+.icon-link li{
+    box-shadow: 4px 4px 8px 0px #00000014;
+  
+}  
+.icon-link a :hover {
+    box-shadow: 0px 0px 16px 3px #9094FFE5;   
+    border-radius: 40px; 
+    transition: 1s; /*hover特效1秒後跑出來，可依設計調整秒數 */
+}
+.project{
+    padding: 160px 0;
+}
+.project-title{
+    width: 746px;
+    margin-left: auto;
+    margin-bottom: 16px;
+}
+.project-section-right{
+    width: 856px;
+    
+}
+.project-section-right-top{
+    margin-bottom: 28px;
+}
+.but-black{
+    padding: 12px 24px;
+    border-radius: 32px;
+    background:#000;
+    color: #fff;
+}
+.footer{
+    background: #000;
+    color: white;
+    padding: 40px 0;
+}
+.footer p{
+    text-align: center;
+}
+
+
+/* Utils 常用的編碼，在多個地方重複使用*/
+.container{
+    width: 1296px;
+    margin: 0 auto;
+  
+}
+.h1{
+    font-size: 128px;
+}
+.h2{
+    font-size: 64px;
+}
+.fs-1{
+    font-size: 32px;
+}
+.fs-2{
+    font-size: 24px;
+}
+.f-3{
+    font-size: 20px;
+}
+.tex-primary{
+    color: #00FFA3;
+}
+
+.d-flex{
+    display: flex;
+}
+.f-column{
+    flex-direction: column;
+}
+.align-ic{ 
+    align-items: center;
+}
+
+.align-ie{
+    align-items: end;
+}
+.justify-ce{
+    justify-content: end;
+}
+.justify-csb{
+    justify-content: space-between;
+}
+.ml-24{
+    margin-left: 24px;
+}
+
+
